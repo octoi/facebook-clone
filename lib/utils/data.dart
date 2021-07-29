@@ -22,6 +22,18 @@ List<String> usernames = [
   "Peter Parker"
 ];
 
+class User {
+  String name;
+  String profile;
+
+  User({required this.name, required this.profile});
+}
+
+User currentUser = User(
+    name: 'Mr Hecker',
+    profile:
+        'https://cdn.pixabay.com/photo/2012/09/04/21/20/penguin-56101_960_720.jpg');
+
 Random random = new Random();
 
 String getRandomImage() {
