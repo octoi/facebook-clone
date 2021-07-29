@@ -1,5 +1,6 @@
 import 'package:facebook/utils/constants.dart';
 import 'package:facebook/widgets/custom_gray_btn.dart';
+import 'package:facebook/widgets/text_input_section.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -45,6 +46,13 @@ class HomeScreen extends StatelessWidget {
                   color: appGrayDark,
                 ),
               ),
+            ],
+          ),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              TextInputSection(),
             ],
           ),
         ),
