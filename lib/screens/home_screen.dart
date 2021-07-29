@@ -1,4 +1,5 @@
 import 'package:facebook/utils/constants.dart';
+import 'package:facebook/widgets/custom_gray_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,41 +22,9 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         actions: [
-          Container(
-            decoration: BoxDecoration(
-              color: appGray,
-              shape: BoxShape.circle,
-            ),
-            padding: EdgeInsets.all(10.0),
-            child: InkWell(
-              onTap: () {},
-              child: Center(
-                child: FaIcon(
-                  FontAwesomeIcons.search,
-                  color: appBlack,
-                  size: 18.0,
-                ),
-              ),
-            ),
-          ),
+          CustomGrayButton(icon: FontAwesomeIcons.search),
           SizedBox(width: 10.0),
-          Container(
-            decoration: BoxDecoration(
-              color: appGray,
-              shape: BoxShape.circle,
-            ),
-            padding: EdgeInsets.all(10.0),
-            child: InkWell(
-              onTap: () {},
-              child: Center(
-                child: FaIcon(
-                  FontAwesomeIcons.facebookMessenger,
-                  color: appBlack,
-                  size: 18.0,
-                ),
-              ),
-            ),
-          ),
+          CustomGrayButton(icon: FontAwesomeIcons.facebookMessenger),
           SizedBox(width: 10.0),
         ],
       ),
