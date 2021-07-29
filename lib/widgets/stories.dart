@@ -47,8 +47,66 @@ class Stories extends StatelessWidget {
               ),
             ],
           ),
+          UserStory(),
+          UserStory(),
+          UserStory(),
+          UserStory(),
+          UserStory(),
+          UserStory(),
+          UserStory(),
+          UserStory(),
+          UserStory(),
+          UserStory(),
         ],
       ),
+    );
+  }
+}
+
+class UserStory extends StatelessWidget {
+  const UserStory({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          height: 180.0,
+          width: 120.0,
+          margin: EdgeInsets.only(right: 10.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            image: DecorationImage(
+              image: NetworkImage(getRandomImage()),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Positioned(
+          top: 10,
+          left: 10,
+          child: CircleAvatar(
+            radius: 16.0,
+            backgroundColor: appBlue,
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(getRandomImage()),
+              radius: 13.0,
+            ),
+          ),
+        ),
+        Positioned(
+          bottom: 10,
+          left: 10,
+          child: Text(
+            getRandomUserName(),
+            style: TextStyle(
+              color: appWhite,
+              fontSize: 16.0,
+            ),
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
+      ],
     );
   }
 }
