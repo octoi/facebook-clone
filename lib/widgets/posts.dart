@@ -129,18 +129,33 @@ class Post extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                children: [
-                  CircleIcon(
-                    icon: Icons.favorite_outline,
-                    color: Colors.pinkAccent,
-                  ),
-                  SizedBox(width: 2.0),
-                  CircleIcon(
-                    icon: Icons.thumb_up_outlined,
-                    color: appBlue,
-                  ),
-                ],
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 20.0,
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CircleIcon(
+                      icon: Icons.favorite_outline,
+                      color: Colors.pinkAccent,
+                    ),
+                    SizedBox(width: 2.0),
+                    CircleIcon(
+                      icon: Icons.thumb_up_outlined,
+                      color: appBlue,
+                    ),
+                    SizedBox(width: 10.0),
+                    Text(
+                      55,
+                      style: TextStyle(
+                        color: appBlack,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ],
           )
