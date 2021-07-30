@@ -94,6 +94,7 @@ class Post extends StatelessWidget {
               ],
             ),
           ),
+          Image.network(getRandomImage()),
         ],
       ),
     );
