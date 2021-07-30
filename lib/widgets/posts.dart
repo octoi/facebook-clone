@@ -130,7 +130,17 @@ class Post extends StatelessWidget {
                 ],
               ),
               Row(
-                children: [],
+                children: [
+                  CircleIcon(
+                    icon: Icons.favorite_outline,
+                    color: Colors.pinkAccent,
+                  ),
+                  SizedBox(width: 2.0),
+                  CircleIcon(
+                    icon: Icons.thumb_up_outlined,
+                    color: appBlue,
+                  ),
+                ],
               ),
             ],
           )
@@ -142,7 +152,7 @@ class Post extends StatelessWidget {
 
 class CircleIcon extends StatelessWidget {
   final IconData icon;
-  final Color color;
+  final Color? color;
 
   const CircleIcon({
     Key? key,
@@ -154,7 +164,12 @@ class CircleIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundColor: color,
-      child: Icon(icon),
+      radius: 12.0,
+      child: Icon(
+        icon,
+        color: Colors.white,
+        size: 16.0,
+      ),
     );
   }
 }
