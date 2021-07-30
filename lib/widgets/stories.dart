@@ -32,11 +32,11 @@ class Stories extends StatelessWidget {
                 bottom: 10,
                 left: 10,
                 child: CircleAvatar(
-                  radius: 13.0,
+                  radius: 18.0,
                   backgroundColor: appWhite,
                   child: CircleAvatar(
                     backgroundColor: appBlue,
-                    radius: 12.0,
+                    radius: 16.0,
                     child: Icon(
                       Icons.add,
                       size: 20.0,
