@@ -12,6 +12,13 @@ class Posts extends StatelessWidget {
     return Column(
       children: [
         Post(),
+        Post(),
+        Post(),
+        Post(),
+        Post(),
+        Post(),
+        Post(),
+        Post(),
       ],
     );
   }
@@ -157,6 +164,7 @@ class Post extends StatelessWidget {
                   ],
                 ),
               ),
+              Divider(),
             ],
           )
         ],
