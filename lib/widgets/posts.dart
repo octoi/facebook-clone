@@ -128,11 +128,33 @@ class Post extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              Row(
+                children: [],
+              ),
             ],
           )
         ],
       ),
+    );
+  }
+}
+
+class CircleIcon extends StatelessWidget {
+  final IconData icon;
+  final Color color;
+
+  const CircleIcon({
+    Key? key,
+    required this.icon,
+    required this.color,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return CircleAvatar(
+      backgroundColor: color,
+      child: Icon(icon),
     );
   }
 }
