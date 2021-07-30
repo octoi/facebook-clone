@@ -46,8 +46,13 @@ String getRandomUserName() {
   return usernames[randomeNumber];
 }
 
-bool getRandomBool() {
-  int randomNumber = random.nextInt(2);
+// bool getRandomBool() {
+//   int randomNumber = random.nextInt(2);
 
-  return randomNumber == 1;
+//   return randomNumber == 1;
+// }
+
+int getRandomNumber() {
+  int randomNumber = random.nextInt(500);
+  return randomNumber;
 }
