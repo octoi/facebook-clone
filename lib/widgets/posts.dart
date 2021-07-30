@@ -148,7 +148,7 @@ class Post extends StatelessWidget {
                     ),
                     SizedBox(width: 10.0),
                     Text(
-                      55,
+                      '${getRandomNumber()}',
                       style: TextStyle(
                         color: appBlack,
                         fontWeight: FontWeight.w600,
