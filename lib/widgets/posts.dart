@@ -83,6 +83,14 @@ class Post extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 10.0),
+                Text(
+                  'Voluptate cupidatat non sit incididunt. Aute do aute eu ut qui excepteur consequat veniam elit. Cupidatat aute incididunt commodo est duis enim adipisicing ipsum magna ullamco elit adipisicing sint. Dolore enim veniam veniam irure ut. Ad et laborum fugiat id.',
+                  style: TextStyle(
+                    color: appBlack,
+                    fontSize: 15.0,
+                  ),
+                ),
               ],
             ),
           ),
