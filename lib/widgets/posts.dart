@@ -76,6 +76,11 @@ class Post extends StatelessWidget {
                         )
                       ],
                     ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.more_horiz),
+                      color: appBlack,
+                    ),
                   ],
                 ),
               ],
