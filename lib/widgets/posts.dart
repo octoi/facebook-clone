@@ -1,6 +1,8 @@
 import 'package:facebook/utils/constants.dart';
 import 'package:facebook/utils/data.dart';
+import 'package:facebook/widgets/text_input_section.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Posts extends StatelessWidget {
   const Posts({Key? key}) : super(key: key);
@@ -94,7 +96,41 @@ class Post extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(height: 10.0),
           Image.network(getRandomImage()),
+          SizedBox(height: 10.0),
+          Column(
+            children: [
+              Row(
+                children: [
+                  Flexible(
+                    child: IconTextButton(
+                      icon: Icons.thumb_up_outlined,
+                      text: "Like",
+                      size: 22.0,
+                      color: appBlack,
+                    ),
+                  ),
+                  Flexible(
+                    child: IconTextButton(
+                      icon: FontAwesomeIcons.commentAlt,
+                      text: "Discuss",
+                      size: 18.0,
+                      color: appBlack,
+                    ),
+                  ),
+                  Flexible(
+                    child: IconTextButton(
+                      icon: Icons.share_outlined,
+                      text: "Share",
+                      size: 22.0,
+                      color: appBlack,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
