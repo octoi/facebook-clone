@@ -43,6 +43,7 @@ class TextInputSection extends StatelessWidget {
                 icon: Icons.videocam_outlined,
                 text: "Live",
                 size: 25.0,
+                color: Colors.deepPurpleAccent,
               ),
             ),
             Flexible(
@@ -50,6 +51,7 @@ class TextInputSection extends StatelessWidget {
                 icon: Icons.collections,
                 text: "Photo",
                 size: 22.0,
+                color: Colors.green,
               ),
             ),
             Flexible(
@@ -57,6 +59,7 @@ class TextInputSection extends StatelessWidget {
                 icon: FontAwesomeIcons.facebookMessenger,
                 text: "Discuss",
                 size: 18.0,
+                color: appBlue,
               ),
             ),
           ],
@@ -70,12 +73,14 @@ class IconTextButton extends StatelessWidget {
   final IconData icon;
   final String text;
   final double size;
+  final Color color;
 
   const IconTextButton({
     Key? key,
     required this.icon,
     required this.text,
     required this.size,
+    required this.color,
   }) : super(key: key);
 
   @override
@@ -89,7 +94,7 @@ class IconTextButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: appBlack, size: size),
+            Icon(icon, color: color, size: size),
             SizedBox(width: 5.0),
             Text(
               text,
