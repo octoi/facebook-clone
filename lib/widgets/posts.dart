@@ -1,3 +1,5 @@
+import 'package:facebook/utils/constants.dart';
+import 'package:facebook/utils/data.dart';
 import 'package:flutter/material.dart';
 
 class Posts extends StatelessWidget {
@@ -21,8 +23,66 @@ class Post extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 5.0),
       width: double.infinity,
-      color: Colors.red,
-      height: 200.0,
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: 10.0,
+              horizontal: 20.0,
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(getRandomImage()),
+                        ),
+                        SizedBox(width: 10.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              getRandomUserName(),
+                              style: TextStyle(
+                                color: appBlack,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 16.0,
+                              ),
+                            ),
+                            SizedBox(height: 3.0),
+                            Row(
+                              children: [
+                                Text(
+                                  'Just Now • ',
+                                  style: TextStyle(
+                                    color: appGrayDark,
+                                    fontSize: 13.0,
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.public,
+                                  color: appGrayDark,
+                                  size: 13.0,
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
